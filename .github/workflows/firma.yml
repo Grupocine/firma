@@ -1,10 +1,15 @@
 name: Firma semanal
 
+# Corre cuando cambia semana.json (o el logo / el generador), todos los días a las 00:10 de Montevideo,
+# y también se puede lanzar a mano desde la pestaña Actions.
 on:
   push:
     branches: [main]
     paths: [semana.json, generar.py, logo-grupocine.png, .github/workflows/firma.yml]
   workflow_dispatch:
+  # Todos los días a las 00:10 de Montevideo: así el jueves cambia sola a la semana nueva.
+  schedule:
+    - cron: "10 3 * * *"
 
 permissions:
   contents: read
