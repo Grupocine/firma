@@ -1,8 +1,29 @@
 {
-  "titulos": [
-    "Título de película 1",
-    "Título de película 2",
-    "Título de película 3"
-  ],
-  "enlace": "https://www.grupocine.com.uy"
+  "enlace": "https://www.grupocine.com.uy",
+  "semanas": [
+    {
+      "desde": "2026-11-05",
+      "hasta": "2026-11-11",
+      "titulos": [
+        {"titulo": "Godzilla Minus Zero", "sello": "estreno"},
+        {"titulo": "¿Querés ser mi hijo?", "sello": "estreno"},
+        {"titulo": "Caballo salvaje nueve", "sello": "estreno"},
+        {"titulo": "El gato con sombrero", "sello": "pre-estreno"},
+        "Yo, Narciso",
+        "Sensatez y sentimientos"
+      ]
+    },
+    {
+      "desde": "2026-11-12",
+      "hasta": "2026-11-18",
+      "titulos": [
+        {"titulo": "Ebenezer: Los fantasmas de Navidad", "sello": "estreno"},
+        {"titulo": "El gato con sombrero", "sello": "estreno"},
+        {"titulo": "Cómo robar un banco", "sello": "estreno"},
+        {"titulo": "Los juegos del hambre: Amanecer en la cosecha", "sello": "pre-estreno"},
+        "¿Querés ser mi hijo?",
+        "Godzilla Minus Zero"
+      ]
+    }
+  ]
 }
