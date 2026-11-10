@@ -1,4 +1,4 @@
-"""Genera la línea animada «EN CARTEL» de la firma y el enlace semanal.
+"""Genera la línea animada «EN CARTELERA» de la firma y el enlace semanal.
 
 Lee semana.json, elige la semana vigente (jueves a miércoles, hora de Montevideo)
 y escribe en la carpeta sitio/:
@@ -45,7 +45,7 @@ def ajustar(titulo, d, espacio):
 
 def etiqueta(d, sello, f_etiqueta, medio):
     """Dibuja la etiqueta de la izquierda y devuelve dónde empieza el título.
-    Estreno: píldora roja llena · Pre-estreno: píldora con borde rojo · resto: «EN CARTEL»."""
+    Estreno: píldora roja llena · Pre-estreno: píldora con borde rojo · resto: «EN CARTELERA»."""
     if sello in ("estreno", "pre-estreno"):
         texto = "ESTRENO" if sello == "estreno" else "PRE-ESTRENO"
         f = fuente("Poppins-Bold.ttf", 9)
@@ -58,8 +58,8 @@ def etiqueta(d, sello, f_etiqueta, medio):
             d.rounded_rectangle(caja, radius=8 * ESCALA, outline=ROJO, width=round(1.5 * ESCALA))
             d.text((ancho / 2, medio), texto, font=f, fill=ROJO, anchor="mm")
         return ancho + 8 * ESCALA
-    d.text((0, medio), "EN CARTEL", font=f_etiqueta, fill=ROJO, anchor="lm")
-    x = d.textlength("EN CARTEL", font=f_etiqueta) + 10 * ESCALA
+    d.text((0, medio), "EN CARTELERA", font=f_etiqueta, fill=ROJO, anchor="lm")
+    x = d.textlength("EN CARTELERA", font=f_etiqueta) + 10 * ESCALA
     d.ellipse([x - 6 * ESCALA, medio - 1.5 * ESCALA, x - 3 * ESCALA, medio + 1.5 * ESCALA], fill=PUNTO)
     return x
 
