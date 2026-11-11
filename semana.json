@@ -2,18 +2,6 @@
   "enlace": "https://www.grupocine.com.uy",
   "semanas": [
     {
-      "desde": "2026-11-05",
-      "hasta": "2026-11-11",
-      "titulos": [
-        {"titulo": "Godzilla Minus Zero", "sello": "estreno"},
-        {"titulo": "¿Querés ser mi hijo?", "sello": "estreno"},
-        {"titulo": "Caballo salvaje nueve", "sello": "estreno"},
-        {"titulo": "El gato con sombrero", "sello": "pre-estreno"},
-        "Yo, Narciso",
-        "Sensatez y sentimientos"
-      ]
-    },
-    {
       "desde": "2026-11-12",
       "hasta": "2026-11-18",
       "titulos": [
