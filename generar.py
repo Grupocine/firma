@@ -140,6 +140,17 @@ def main():
         '<p><img src="logo-grupocine.png" width="84"></p><p><img src="en-cartel.gif" width="300"></p>',
         encoding="utf-8")
     (SALIDA / ".nojekyll").write_text("")
+    # Hosting con encabezados (Cloudflare Pages o Netlify): que nadie guarde la línea de cartelera (Apple Mail, Gmail, etc. la piden de nuevo).
+    (SALIDA / "_headers").write_text(
+        "/en-cartel.gif\n"
+        "  Cache-Control: no-cache, no-store, must-revalidate, max-age=0\n"
+        "  Pragma: no-cache\n"
+        "  Expires: 0\n"
+        "/estreno/*\n"
+        "  Cache-Control: no-cache, max-age=0\n",
+        encoding="utf-8")
+    # Semana vigente: el Action la guarda en el repo y así el hosting se vuelve a publicar el jueves.
+    (BASE / "semana-vigente.txt").write_text((rango or "única") + "\n", encoding="utf-8")
     print(f"Hoy {hoy} · semana {rango or 'única'}:", ", ".join(f"{t} [{s}]" if s else t for t, s in titulos))
 
 
