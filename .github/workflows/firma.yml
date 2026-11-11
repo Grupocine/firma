@@ -12,7 +12,7 @@ on:
     - cron: "10 3 * * *"
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -33,6 +33,12 @@ jobs:
           python-version: "3.12"
       - run: pip install pillow
       - run: python generar.py
+      - name: Guardar la semana vigente (el jueves vuelve a publicar el hosting)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git add semana-vigente.txt
+          git diff --cached --quiet || (git commit -m "Semana vigente: $(cat semana-vigente.txt)" && git push)
       - uses: actions/upload-pages-artifact@v3
         with:
           path: sitio
