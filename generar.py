@@ -18,6 +18,7 @@ SALIDA = BASE / "sitio"
 ROJO, TINTA, FONDO, PUNTO = (219, 50, 47), (17, 17, 17), (255, 255, 255), (200, 200, 200)
 ANCHO, ALTO, ESCALA = 300, 22, 2  # se muestra a 300x22, se dibuja al doble para pantallas Retina
 MONTEVIDEO = timezone(timedelta(hours=-3))
+ETIQUETA_PTS = 12  # ESTRENO / PRE-ESTRENO / EN CARTELERA, del mismo tamaño que los títulos
 
 
 def mezclar(a, b, t):
@@ -48,14 +49,14 @@ def etiqueta(d, sello, f_etiqueta, medio):
     Estreno: píldora roja llena · Pre-estreno: píldora con borde rojo · resto: «EN CARTELERA»."""
     if sello in ("estreno", "pre-estreno"):
         texto = "ESTRENO" if sello == "estreno" else "PRE-ESTRENO"
-        f = fuente("Poppins-Bold.ttf", 9)
-        ancho = d.textlength(texto, font=f) + 12 * ESCALA
-        caja = [0, medio - 8 * ESCALA, ancho, medio + 8 * ESCALA]
+        f = fuente("Poppins-Bold.ttf", ETIQUETA_PTS)
+        ancho = d.textlength(texto, font=f) + 14 * ESCALA
+        caja = [0, medio - 10 * ESCALA, ancho, medio + 10 * ESCALA]
         if sello == "estreno":
-            d.rounded_rectangle(caja, radius=8 * ESCALA, fill=ROJO)
+            d.rounded_rectangle(caja, radius=10 * ESCALA, fill=ROJO)
             d.text((ancho / 2, medio), texto, font=f, fill=FONDO, anchor="mm")
         else:
-            d.rounded_rectangle(caja, radius=8 * ESCALA, outline=ROJO, width=round(1.5 * ESCALA))
+            d.rounded_rectangle(caja, radius=10 * ESCALA, outline=ROJO, width=round(1.5 * ESCALA))
             d.text((ancho / 2, medio), texto, font=f, fill=ROJO, anchor="mm")
         return ancho + 8 * ESCALA
     d.text((0, medio), "EN CARTELERA", font=f_etiqueta, fill=ROJO, anchor="lm")
@@ -77,7 +78,7 @@ def cuadro(pelicula, alfa, f_etiqueta):
 
 
 def generar_gif(titulos, destino):
-    f_etiqueta = fuente("Poppins-Bold.ttf", 10)
+    f_etiqueta = fuente("Poppins-Bold.ttf", ETIQUETA_PTS)
     cuadros, tiempos = [], []
     for i, t in enumerate(titulos):
         # El primer cuadro de cada título ya se ve completo: Outlook viejo muestra solo ese.
