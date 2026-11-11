@@ -70,7 +70,7 @@ def cuadro(pelicula, alfa, f_etiqueta):
     d = ImageDraw.Draw(im)
     medio = ALTO * ESCALA / 2
     x = etiqueta(d, sello, f_etiqueta, medio)
-    texto, f = ajustar(titulo, d, ANCHO * ESCALA - x - 4 * ESCALA)
+    texto, f = ajustar(titulo.upper(), d, ANCHO * ESCALA - x - 4 * ESCALA)
     d.text((x + 2 * ESCALA, medio + (1 - alfa) * 5 * ESCALA), texto,
            font=f, fill=mezclar(FONDO, TINTA, alfa), anchor="lm")
     return im
