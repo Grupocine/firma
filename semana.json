@@ -12,6 +12,18 @@
         "¿Querés ser mi hijo?",
         "Caballo salvaje nueve"
       ]
+    },
+    {
+      "desde": "2026-11-19",
+      "hasta": "2026-11-25",
+      "titulos": [
+        {"titulo": "Los juegos del hambre: Amanecer en la cosecha", "sello": "estreno"},
+        {"titulo": "Yo soy Rocky", "sello": "estreno"},
+        {"titulo": "Minotauro", "sello": "estreno"},
+        {"titulo": "The Channeling", "sello": "estreno"},
+        {"titulo": "La nueva Focker", "sello": "pre-estreno"},
+        "Ebenezer: Los fantasmas de Navidad"
+      ]
     }
   ]
 }
