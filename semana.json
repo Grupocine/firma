@@ -2,18 +2,6 @@
   "enlace": "https://www.grupocine.com.uy",
   "semanas": [
     {
-      "desde": "2026-11-12",
-      "hasta": "2026-11-18",
-      "titulos": [
-        {"titulo": "Ebenezer: Los fantasmas de Navidad", "sello": "estreno"},
-        {"titulo": "El gato con sombrero", "sello": "estreno"},
-        {"titulo": "Cómo robar un banco", "sello": "estreno"},
-        {"titulo": "Los juegos del hambre: Amanecer en la cosecha", "sello": "pre-estreno"},
-        "¿Querés ser mi hijo?",
-        "Caballo salvaje nueve"
-      ]
-    },
-    {
       "desde": "2026-11-19",
       "hasta": "2026-11-25",
       "titulos": [
@@ -23,6 +11,18 @@
         {"titulo": "The Channeling", "sello": "estreno"},
         {"titulo": "La nueva Focker", "sello": "pre-estreno"},
         "Ebenezer: Los fantasmas de Navidad"
+      ]
+    },
+    {
+      "desde": "2026-11-26",
+      "hasta": "2026-12-02",
+      "titulos": [
+        {"titulo": "La nueva Focker", "sello": "estreno"},
+        {"titulo": "Hechizo: Bienvenidos a Hexe", "sello": "estreno"},
+        {"titulo": "The Channeling", "sello": "estreno"},
+        "Los juegos del hambre: Amanecer en la cosecha",
+        "Ebenezer: Los fantasmas de Navidad",
+        "El gato con sombrero"
       ]
     }
   ]
