@@ -2,18 +2,6 @@
   "enlace": "https://www.grupocine.com.uy",
   "semanas": [
     {
-      "desde": "2026-11-19",
-      "hasta": "2026-11-25",
-      "titulos": [
-        {"titulo": "Los juegos del hambre: Amanecer en la cosecha", "sello": "estreno"},
-        {"titulo": "Yo soy Rocky", "sello": "estreno"},
-        {"titulo": "Minotauro", "sello": "estreno"},
-        {"titulo": "The Channeling", "sello": "estreno"},
-        {"titulo": "La nueva Focker", "sello": "pre-estreno"},
-        "Ebenezer: Los fantasmas de Navidad"
-      ]
-    },
-    {
       "desde": "2026-11-26",
       "hasta": "2026-12-02",
       "titulos": [
