@@ -6,7 +6,11 @@
       "hasta": "2026-12-02",
       "titulos": [
         {"titulo": "La nueva Focker", "sello": "estreno"},
-        {"titulo": "Hechizo: Bienvenidos a Hexe", "sello": "estreno"}
+        {"titulo": "Hechizo: Bienvenidos a Hexe", "sello": "estreno"},
+        {"titulo": "The Channeling", "sello": "estreno"},
+        "Los juegos del hambre: Amanecer en la cosecha",
+        "Ebenezer: Los fantasmas de Navidad",
+        "El gato con sombrero"
       ]
     }
   ]
